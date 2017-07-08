@@ -4,13 +4,13 @@
 
 import {o} from "atp-sugar";
 
-import defaults from "config/defaults";
+import overrides from "config/overrides";
 
 class Config {
     constructor() {
         this.defaults = {};
-        this.values = defaults;
-        this.finalValues = defaults;
+        this.values = overrides;
+        this.finalValues = overrides;
     }
 
     setDefaults(values) {
