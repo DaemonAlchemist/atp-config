@@ -11,5 +11,8 @@
     "url": "git.repo.goes.here"
   },
   "author": "Andrew Wittrock",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "config": "^1.26.2"
+  }
 }
