@@ -4,17 +4,16 @@
 
 import {o} from "atp-sugar";
 
-import overrides from "config/overrides";
-
 class Config {
     constructor() {
         this.defaults = {};
-        this.values = overrides;
-        this.finalValues = overrides;
+        this.values = {};
+        this.finalValues = {};
     }
 
     setDefaults(values) {
         this.defaults = o(this.defaults).merge(values).raw;
+        this.finalValues = o(this.defaults).merge(this.values).raw;
     }
 
     setValues(values) {
@@ -24,6 +23,15 @@ class Config {
 
     get(path) {
         return this._get(path, this.finalValues);
+    }
+
+    isset(path) {
+        try {
+            const temp = this.get(path);
+            return true;
+        } catch(e) {
+            return false;
+        }
     }
 
     _get(path, values) {
