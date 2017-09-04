@@ -1,6 +1,6 @@
 {
   "name": "atp-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": " A module for handling application configs.",
   "main": "src/index.js",
   "scripts": {
@@ -18,8 +18,7 @@
   },
   "author": "Andrew Wittrock",
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
