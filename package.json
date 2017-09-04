@@ -4,7 +4,13 @@
   "description": " A module for handling application configs.",
   "main": "src/index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm run compile && mocha --compilers js:babel-core/register",
+    "test-quick": "mocha --compilers js:babel-core/register",
+    "compile": "babel --presets es2015 -d lib/ src/",
+    "prepublish": "npm run compile",
+    "major": "npm version major && git push && git push origin --tags && npm publish",
+    "minor": "npm version minor && git push && git push origin --tags && npm publish",
+    "patch": "npm version patch && git push && git push origin --tags && npm publish"
   },
   "repository": {
     "type": "git",
@@ -13,5 +19,12 @@
   "author": "Andrew Wittrock",
   "license": "MIT",
   "dependencies": {
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.1.2",
+    "mocha": "^3.5.0"
   }
 }
