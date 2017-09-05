@@ -2,7 +2,7 @@
   "name": "atp-config",
   "version": "0.1.1",
   "description": " A module for handling application configs.",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "npm run compile && mocha --compilers js:babel-core/register",
     "test-quick": "mocha --compilers js:babel-core/register",
