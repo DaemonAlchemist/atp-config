@@ -1,6 +1,6 @@
 {
   "name": "atp-config",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": " A module for handling application configs.",
   "main": "lib/index.js",
   "scripts": {
