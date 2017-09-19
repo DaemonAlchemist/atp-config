@@ -22,7 +22,11 @@ class Config {
     }
 
     get(path) {
-        return this._get(path, this.finalValues);
+        try {
+            return this._get(path, this.finalValues);
+        } catch (e) {
+            throw e + " while trying to fetch config path " + path;
+        }
     }
 
     isset(path) {
