@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git.repo.goes.here"
+    "url": "https://github.com/DaemonAlchemist/atp-config.git"
   },
   "author": "Andrew Wittrock",
   "license": "MIT",
