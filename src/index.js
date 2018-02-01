@@ -1,6 +1,3 @@
-/**
- * Created by Andrea on 5/17/2017.
- */
 
 import {o} from "atp-sugar";
 
